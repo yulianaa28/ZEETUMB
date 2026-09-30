@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasir Sederhana</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kasir Sederhana</h1>
+      <p>Website kasir native HTML, CSS & JavaScript</p>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Tambah Produk</h2>
+        <input id="nama" type="text" placeholder="Nama produk">
+        <input id="harga" type="number" placeholder="Harga">
+        <input id="jumlah" type="number" min="1" value="1" placeholder="Jumlah">
+        <button onclick="tambahProduk()">+ Tambah ke Keranjang</button>
+      </section>
+
+      <section class="card">
+        <h2>Keranjang</h2>
+        <div id="keranjang"></div>
+        <div class="total">
+          <span>Total</span>
+          <strong id="total">Rp0</strong>
+        </div>
+
+        <input id="bayar" type="number" placeholder="Uang pembayaran">
+        <button class="bayar" onclick="hitungKembalian()">Bayar</button>
+        <div id="hasil" class="hasil"></div>
+        <button class="reset" onclick="resetKasir()">Reset Transaksi</button>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
